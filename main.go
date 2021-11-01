@@ -3,6 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	x := -101
-	fmt.Println(isPalindrome(x))
+	strs := []string{"flower", "flow", "flight"}
+	result := longestCommonPrefix(strs)
+
+	fmt.Println(result)
 }
