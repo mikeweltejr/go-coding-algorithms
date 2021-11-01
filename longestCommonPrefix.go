@@ -1,11 +1,6 @@
 package main
 
-import (
-	"fmt"
-	"strings"
-)
-
-func longestCommonPrefixTwo(strs []string) string {
+func longestCommonPrefix(strs []string) string {
 	retStr := ""
 
 	if len(strs) == 1 {
@@ -30,25 +25,4 @@ func longestCommonPrefixTwo(strs []string) string {
 	}
 
 	return retStr
-}
-
-func longestCommonPrefix(strs []string) string {
-	if len(strs) == 0 {
-		return ""
-	}
-
-	prefix := strs[0]
-
-	for i := 1; i < len(strs); i++ {
-		for strings.Index(strs[i], prefix) == 0 {
-			prefix := prefix[0 : len(prefix)-1]
-			fmt.Println(prefix)
-			if prefix == "" {
-				return ""
-			}
-			fmt.Println(strings.Index(strs[i], prefix))
-		}
-	}
-
-	return prefix
 }
