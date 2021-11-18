@@ -3,11 +3,11 @@ package main
 import "fmt"
 
 func main() {
-	nums1 := []int{1, 2, 2}
+	nums1 := []int{4, 3, 2, 7, 8, 2, 3, 1}
 
-	// { 1, 2, 3, 4, 5, 6, 7 }
+	retNums := findDisappearingNumbers(nums1)
 
-	result := removeDuplicates(nums1)
-
-	fmt.Println(result)
+	for _, num := range retNums {
+		fmt.Println(num)
+	}
 }
